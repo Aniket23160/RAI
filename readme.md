@@ -49,6 +49,12 @@ To calculate the Delta (Δ) value as per the algorithm:
 2. **Run the Script:**
    - Execute `delta_calculator.py` to compute the Delta (Δ) value.
 
+## Contributing
+Contributions are welcome! Please feel free to open an issue or submit a pull request.
+
+## Contact
+For any questions or feedback, please get in touch with the authors of the paper or raise an issue in this repository.
+
 ## Citation
 
 If you use this code or refer to the methodology in your work, please cite the following paper:
