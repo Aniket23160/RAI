@@ -3,10 +3,10 @@
 This repository contains the code implementation for the **Representative Arm Identification** problem, as described in the paper ["Representative Arm Identification: A Fixed Confidence Approach to Identify Cluster Representatives"](https://arxiv.org/pdf/2408.14195). The approach focuses on identifying representative arms from clusters within a dataset, providing a fixed confidence solution to this problem.
 
 ## Overview
-
-![Representative Arm Identification](path/to/your/image.png)
-
 The repository provides scripts to apply the Representative Arm Identification algorithm on both the **Movielens dataset** and artificial datasets. Additionally, it includes a script for calculating the Delta (Δ) value as defined in the paper.
+![Representative Arm Identification](image.png)
+*Figure 1: An RAI problem instance with m = 6 clusters, c = (4, 5, 5, 3, 2, 2), and r =(2, 3, 1, 2, 0, 1). The circled arms illustrate one of the correct outputs for this problem.*
+
 ## Usage Instructions
 
 ### Movielens Dataset
