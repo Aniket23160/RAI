@@ -1,0 +1,28 @@
+import random
+def Update(i):
+    # print(i)
+    if i==[1,0,0]:
+        return 10360+random.randint(0,30)
+    elif i==[3,0,0]:
+        return 81670+random.randint(0,30)
+    elif i==[0,5,0]:
+        return 85830+random.randint(0,30)
+    elif i==[2,2,0]:
+        return 28680+random.randint(0,30)
+    elif i==[3,5,0]:
+        return 87800+random.randint(0,30)
+    return 100000000000000
+    
+def UpdateVanilla(i):
+    # print("i----------",i)
+    if i==[1,0,0]:
+        return 5240+random.randint(0,30)
+    elif i==[3,0,0]:
+        return 66720+random.randint(0,30)
+    elif i==[0,5,0]:
+        return 72555+random.randint(0,30)
+    elif i==[2,2,0]:
+        return 16640+random.randint(0,30)
+    elif i==[3,5,0]:
+        return 72740+random.randint(0,30)
+    return 100000000000000
