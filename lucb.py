@@ -1,4 +1,4 @@
-#Working on it not complete
+
 
 import math
 import numpy as np
@@ -16,9 +16,6 @@ def pull(mean):
 
 def alpha(R,delta,N,R_i):
     return math.sqrt(math.log(((math.pi**2)*(R**3)*N)/(3*delta))/(2*R_i))
-
-# def alpha(R,delta,N,R_i):
-#     return math.sqrt(math.log((5*(R**4)*N)/(4*delta))/(2*R_i))
 
 def check_true(required,cluster,u_cap,c,pulls,v):
     count=0
@@ -117,9 +114,7 @@ def update2(cluster,required,R,u_cap,delta):
     if len(cluster_temp)<len(cluster):
         cluster_temp.append(c)
     for i in range(len(cluster)):
-        # cluster[i]-=cluster_temp[i]
         required[i]-=cluster_temp[i]
-    # print("required------",required)
     return u_cap,required,cluster
 
 
@@ -197,10 +192,8 @@ def lucb_algo(delta,cluster,required,Arms,pulls,v):
     R=1
 
     while(check_true(required,cluster,u_cap,count,pulls,v)):
-        # print(u_cap)
         u_cap.sort(key=lambda x:x[0],reverse=True)
         R+=1
-        # print("--------------------------------",R)
         u_cap,c=pull_arms(u_cap,cluster,delta,len(Arms),R)
         count+=c
         u_cap,required, cluster=update2(cluster,required,R,u_cap,delta)
@@ -212,28 +205,4 @@ def lucb_algo(delta,cluster,required,Arms,pulls,v):
     answer=[i[:4] for i in u_cap]
     
     return count,answer
-
-# def lucb(Arms,cluster,required,delta):
-#     # constant=13/len(Arms)
-#     # ans=algo(delta,cluster,required,Arms)
-#     return lucb_algo(delta,cluster,required,Arms)
 Arms=[0.3,0.4,0.6,0.8,0.1,0.35,0.65,0.85,0.15,0.36]
-
-# ans=[]
-# v=[0.37,0.39,0.41,0.43,0.45,0.47,0.49,0.51,0.53,0.55,0.57,0.59,0.61,0.63]
-# for var in v:
-#     # print(var)
-#     pulls=0
-#     for i in range(100):
-#         print(var,i)
-#         Arms=[0.35, 0.35, var, 0.65, 0.65]
-#         cluster=[2,1,2]
-#         required=[0,1,0]
-#         delta=0.01
-#         merging=True
-#         # pulls+=butterscotch(Arms,cluster,required,delta,merging)
-#         pulls+=lucb_algo(delta,cluster,required,Arms)
-
-#     ans.append(pulls/100)
-#     print(ans)
-# print(ans)
